@@ -12,7 +12,6 @@
       </svg>
     </button>
 
-    <!-- Desktop Menu -->
     <ul class="hidden md:flex gap-10 text-lg">
       <li><a routerLink="/" routerLinkActive="text-violet-400 font-bold" class="hover:text-violet-300">Home</a></li>
       <li><a routerLink="/about" routerLinkActive="text-violet-400 font-bold" class="hover:text-violet-300">About</a>
@@ -29,7 +28,6 @@
 
   </div>
 
-  <!-- Mobile Menu -->
   <div *ngIf="menuOpen" class="md:hidden mt-4 space-y-3 px-4 bg-gray-700 rounded-lg py-4">
     <a routerLink="/" routerLinkActive="text-violet-400 font-bold" class="block hover:text-violet-300">Home</a>
     <a routerLink="/about" routerLinkActive="text-violet-400 font-bold" class="block hover:text-violet-300">About</a>
