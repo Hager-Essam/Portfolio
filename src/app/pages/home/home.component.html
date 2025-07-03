@@ -1,19 +1,23 @@
-<section class="bg-gray-800 min-h-screen text-white flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-12">
+<section class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-12 transition-colors duration-300">
+
 
   <div class="text-center md:text-left max-w-xl" data-aos="fade-up" data-aos-duration="1000">
-    <h2 class="text-4xl font-bold text-violet-400">
+    <h2 class="text-4xl font-bold text-violet-600 dark:text-violet-400">
       <span id="typed-text"></span>
     </h2>
-    <h2 id="static-text" class="hidden text-4xl font-bold text-violet-400 mb-10">
+    <h2 id="static-text" class="hidden text-4xl font-bold text-violet-600 dark:text-violet-400 mb-10">
       Hello, I am Hager Essam<br>
       Full-Stack Developer
     </h2>
-    <p class="text-gray-200 mt-4 text-lg leading-relaxed">
-      I'm a full-stack developer who loves building websites and web apps using Angular and .NET. I enjoy creating clean, easy-to-use designs and writing code that works well and runs fast. I've worked on different projects like medical apps and dashboards. I’m passionate about what I do and enjoy turning ideas into real working apps.
+
+    <p class="mt-4 text-lg leading-relaxed text-gray-800 dark:text-gray-200">
+      I'm a full-stack developer who loves building websites and web apps using Angular and .NET.
+      I enjoy creating clean, easy-to-use designs and writing code that works well and runs fast.
+      I've worked on different projects like medical apps and dashboards.
+      I’m passionate about what I do and enjoy turning ideas into real working apps.
     </p>
 
     <div class="flex flex-col md:flex-row gap-4 mt-6">
-
       <a routerLink="/contact"
          class="bg-sky-600 hover:bg-sky-800 text-white px-6 py-3 rounded-lg shadow-lg transition duration-300">
         Contact Me
@@ -21,7 +25,8 @@
     </div>
   </div>
 
-  <div class="w-60 h-60 md:w-80 md:h-80 overflow-hidden rounded-s-3xl rounded-b-3xl rounded-es-none shadow-lg border-4 border-gray-500"
+
+  <div class="w-60 h-60 md:w-80 md:h-80 overflow-hidden rounded-s-3xl rounded-b-3xl rounded-es-none shadow-lg border-4 border-gray-400 dark:border-gray-500 transform transition-transform duration-500 hover:-translate-y-2 hover:scale-105"
        data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
     <img src="assets/images/me.jpg" alt="Your Photo" class="w-full h-full object-cover" />
   </div>

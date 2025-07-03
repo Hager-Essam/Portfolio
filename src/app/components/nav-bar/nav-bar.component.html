@@ -1,9 +1,43 @@
-<nav class="bg-gray-800 text-gray-200  p-10 pb-0 flex justify-between items-center">
-  <h1 class="text-xl pl-10">Hager Essam</h1>
-  <ul class="flex gap-16">
-    <li ><a routerLink="/" routerLinkActive="font-bold">Home</a></li>
-    <li><a routerLink="/about" routerLinkActive="font-bold">About</a></li>
-    <li><a routerLink="/projects" routerLinkActive="font-bold">Projects</a></li>
-    <li><a routerLink="/contact" routerLinkActive="font-bold">Contact</a></li>
-  </ul>
+<nav class= "bg-light-bg  text-light-text dark:bg-dark-bg dark:text-dark-text px-6 py-4 shadow-md duration-300">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold text-violet-400">Hager Essam</h1>
+
+    <!-- Hamburger (mobile) -->
+    <button class="md:hidden" (click)="toggleMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-10 text-lg">
+      <li><a routerLink="/" routerLinkActive="text-violet-400 font-bold" class="hover:text-violet-300">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="text-violet-400 font-bold" class="hover:text-violet-300">About</a></li>
+      <li><a routerLink="/projects" routerLinkActive="text-violet-400 font-bold" class="hover:text-violet-300">Projects</a></li>
+      <li><a routerLink="/contact" routerLinkActive="text-violet-400 font-bold" class="hover:text-violet-300">Contact</a></li>
+    </ul>
+    <button (click)="toggleTheme()"
+            class="ml-4 px-4 py-2 rounded-full border border-violet-500 text-violet-500 hover:bg-violet-500 hover:text-white transition">
+      {{ isLightMode ? '🌙 Dark Mode' : '☀️ Light Mode' }}
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div *ngIf="menuOpen" class="md:hidden mt-4 space-y-3 px-4 bg-gray-700 rounded-lg py-4">
+    <a routerLink="/" routerLinkActive="text-violet-400 font-bold" class="block hover:text-violet-300">Home</a>
+    <a routerLink="/about" routerLinkActive="text-violet-400 font-bold" class="block hover:text-violet-300">About</a>
+    <a routerLink="/projects" routerLinkActive="text-violet-400 font-bold" class="block hover:text-violet-300">Projects</a>
+    <a routerLink="/contact" routerLinkActive="text-violet-400 font-bold" class="block hover:text-violet-300">Contact</a>
+    <button (click)="toggleTheme()"
+            class="ml-4 px-4 py-2 rounded-full border border-violet-500 text-violet-500 hover:bg-violet-500 hover:text-white transition">
+      {{ isLightMode ? '🌙 Dark Mode' : '☀️ Light Mode' }}
+    </button>
+
+  </div>
+
+
 </nav>

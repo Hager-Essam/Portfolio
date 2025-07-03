@@ -12,4 +12,15 @@ import {FooterComponent} from './components/footer/footer.component';
 })
 export class AppComponent {
   title = 'portfolio';
+  isLightMode = false;
+
+  toggleTheme() {
+    this.isLightMode = !this.isLightMode;
+    const html = document.documentElement;
+    if (this.isLightMode) {
+      html.classList.remove('dark');
+    } else {
+      html.classList.add('dark');
+    }
+  }
 }
