@@ -13,11 +13,12 @@ export default {
           accentHover: '#6d28d9',
           border: '#e5e7eb',
           btnText: '#ffffff',
+
         },
-        dark:{
-          bg:'#1f2937',
-          text:'#dcdfe3',
-          card:'#111827',
+        dark: {
+          bg: '#1f2937',
+          text: '#dcdfe3',
+          card: '#111827',
         }
       },
 
@@ -39,13 +40,19 @@ export default {
         fadeInUp: {
           '0%': {opacity: '0', transform: 'translateY(50px)'},
           '100%': {opacity: '1', transform: 'translateY(0)'}
-        }
+        },
+        fadeSlideIn: {
+          '0%': {opacity: '0', transform: 'translateY(40px)'},
+          '50%': {opacity: '.6', transform: 'translateY(40px)'},
+          '100%': {opacity: '1', transform: 'translateY(0)'},
+        },
       },
       animation: {
         'drop-in-bounce': 'drop-in-bounce 2s ease-out',
         'fade-up': 'fadeUp 1.2s ease-out forwards',
         'scale-in': 'scaleIn 1.2s ease-out forwards',
-        'fade-in-up': 'fadeInUp 1.2s ease-out forwards'
+        'fade-in-up': 'fadeInUp 1.2s ease-out forwards',
+        'fade-slide': 'fadeSlideIn 1s ease-out forwards',
       }
     }
   },
